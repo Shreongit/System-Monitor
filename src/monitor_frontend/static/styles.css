@@ -1,0 +1,8 @@
+body { font-family: Arial, sans-serif; margin: 20px; }
+.system-info { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 12px; }
+.system-info div { background: #f7f7f7; padding: 8px 12px; border-radius: 6px; border: 1px solid #eee; }
+.charts { display:flex; gap:20px; flex-wrap:wrap; }
+canvas { background: #fff; border: 1px solid #ddd; padding: 8px; }
+#procs { width: 100%; border-collapse: collapse; margin-top: 10px; }
+#procs th, #procs td { border: 1px solid #ddd; padding: 6px; text-align: left; }
+#controls { margin-bottom: 10px; }

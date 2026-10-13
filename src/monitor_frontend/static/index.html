@@ -1,0 +1,41 @@
+name=src/monitor_frontend/static/index.html
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>System Monitor</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>System Monitor</h1>
+
+  <div id="systemInfo" class="system-info">
+    <div><strong>CPU:</strong> <span id="cpuName">-</span></div>
+    <div><strong>Cores (physical):</strong> <span id="cpuCores">-</span></div>
+    <div><strong>Threads (logical):</strong> <span id="cpuThreads">-</span></div>
+    <div><strong>RAM Installed:</strong> <span id="ramInstalled">-</span></div>
+    <div><strong>GPU:</strong> <span id="gpuName">-</span></div>
+    <div><strong>OS:</strong> <span id="osInfo">-</span></div>
+  </div>
+
+  <div id="controls">
+    <button id="refreshSnapshot">Refresh Snapshot</button>
+    <span id="status">Connecting...</span>
+  </div>
+
+  <div class="charts">
+    <canvas id="cpuChart" height="120"></canvas>
+    <canvas id="memChart" height="120"></canvas>
+    <canvas id="netChart" height="120"></canvas>
+  </div>
+
+  <h2>Top Processes</h2>
+  <table id="procs">
+    <thead><tr><th>PID</th><th>Name</th><th>CPU%</th><th>MEM%</th><th>User</th></tr></thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

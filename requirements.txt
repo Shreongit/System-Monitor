@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+psutil
+pydantic
+aiofiles
+python-dotenv
+pynvml; platform_system != "Windows"  # optional, only if you want GPU support
